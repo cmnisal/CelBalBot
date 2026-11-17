@@ -1,8 +1,9 @@
 const TelegramBot = require('node-telegram-bot-api');
 var columnify = require('columnify')
 
-// replace the value below with the Telegram token you receive from @BotFather
-const token = '1558004589:AAGCiy4IXgXNDlS0dWsYHQjpVFCvgi04p-w';
+// Telegram token from @BotFather, read from the environment
+const token = process.env.TELEGRAM_BOT_TOKEN;
+if (!token) throw new Error('TELEGRAM_BOT_TOKEN is not set');
 
 //CEL
 
